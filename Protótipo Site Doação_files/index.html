@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recrear Kids</title>
+
+<style>
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ffdede,#fff5c9,#dcffd8,#dbe8ff,#f4dcff);
+background-size:400% 400%;
+animation:fundo 12s ease infinite;
+color:#333;
+}
+
+/* FUNDO */
+@keyframes fundo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* INTRO */
+#intro{
+position:fixed;
+inset:0;
+background:#f8f3ea;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:sumir 4s forwards;
+}
+
+#intro img{
+border-radius: 20px;
+width:800px;
+max-width:90%;
+animation:logo 2s ease;
+
+}
+#comprido{
+width:100%;
+height: 400px;
+object-fit:cover;
+border-radius:12px;
+}
+
+@keyframes logo{
+ 
+0%{opacity:0; transform:scale(.7);}
+100%{opacity:1; transform:scale(1);}
+}
+
+@keyframes sumir{
+0%,80%{opacity:1;}
+100%{opacity:0; visibility:hidden;}
+}
+
+/* SITE */
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:none;
+}
+
+header{
+text-align:center;
+margin-bottom:50px;
+}
+
+header h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.2rem;
+}
+
+/* ESTRUTURA ESTILO FLYER */
+.bloco{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-bottom:40px;
+align-items:center;
+}
+
+.card{
+background:rgba(255,255,255,0.75);
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+backdrop-filter:blur(8px);
+}
+
+.card h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.card p,
+.card li{
+font-size:1.1rem;
+line-height:1.7;
+}
+
+.card ul{
+list-style:none;
+}
+
+.card li::before{
+content:"✔ ";
+color:#2ecc71;
+font-weight:bold;
+}
+
+/* ESPAÇO DA IMAGEM */
+.imagem{
+background:rgba(255,255,255,.75);
+padding:18px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.imagem img{
+width:100%;
+height: 300px;
+object-fit:cover;
+border-radius:12px;
+}
+
+/* BOTÃO */
+.btn{
+display:inline-block;
+margin-top:18px;
+padding:14px 26px;
+background:#5ec96f;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#44b758;
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:30px;
+font-size:1.1rem;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+.bloco{
+grid-template-columns:1fr;
+}
+
+header h1{
+font-size:2.3rem;
+}
+
+.imagem img{
+height:260px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- TELA DE CARREGAMENTO -->
+<div id="intro">
+<img src="Recrear.jpg" alt="Recrear Kids">
+</div>
+
+<!-- SITE -->
+<div class="container">
+
+<header>
+<h1>Doe um brinquedo e espalhe sorrisos</h1>
+<p>Brinquedos e criações sustentáveis para crianças 💚</p>
+</header>
+
+<!-- BLOCO 1 -->
+<section class="bloco">
+
+<div class="card">
+<h2>💛 O que somos</h2>
+<p>
+Na Recriar Kids, acreditamos que o 
+desperdício não deve ser o destino final. 
+Por isso, transformamos aquilo que muitos chamam de “lixo” 
+em novas oportunidades de aprendizado, criatividade e alegria.
+</p>
+</div>
+
+<div class="imagem">
+<!-- TROQUE O NOME DA IMAGEM AQUI -->
+<img src="Image22.jpg" alt="Doação 1">
+</div>
+
+</section>
+
+<!-- BLOCO 2 -->
+<section class="bloco">
+
+<div class="imagem">
+<!-- TROQUE O NOME DA IMAGEM AQUI -->
+<img src="Image1.jpg" alt="Doação 2">
+</div>
+
+<div class="card">
+<h2>✨ O que fazemos?</h2>
+<p>Não fabricamos apenas objetos: resgatamos materiais 
+    que seriam descartados e damos a eles uma nova utilidade. 
+    Um motor de aparelho quebrado que iria para o lixão 
+    pode se tornar um ventilador portátil funcional. O papelão que 
+    seria jogado fora pode virar brinquedos lúdicos e educativos.</p>
+</div>
+
+</section>
+
+<!-- BLOCO 3 -->
+<section class="bloco">
+
+<div class="card">
+<h2>📲 Quer ajudar?</h2>
+<p>
+Entre em contato conosco e participe dessa corrente do bem.
+</p>
+
+<p><strong>WhatsApp:</strong> (42) 99999-9999</p>
+<p><strong>Instagram:</strong> @recriarkids_oficial</p>
+<p><strong>E-mail:</strong> contato@recrearkids.com</p>
+
+</div>
+
+<div class="imagem">
+<!-- TROQUE O NOME DA IMAGEM AQUI -->
+<img id="comprido" src="image5.jpg" alt="Contato">
+</div>
+
+</section>
+
+<footer>
+Recrear Kids © 2026 | Pequenos gestos, grandes sorrisos.
+</footer>
+
+</div>
+
+<script>
+setTimeout(()=>{
+document.querySelector('.container').style.display='block';
+},3800);
+</script>
+
+</body>
+</html>
